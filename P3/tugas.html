@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/P3/field.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="information">
+                <div class="nama" style="margin: 10px 0px 10px 0px;">nama</div> 
+                <div class="nama" style="margin: 100px 0px 100px 0px;">alamat</div>
+                <div class="nama" style="margin: 10px 0px 10px 0px;">tanggal lahir</div>
+                <div class="nama" style="margin: 10px 0px 10px 0px;">jenis kelamin</div>
+                <div class="nama" style="margin: 20px 0px 20px 0px;">hobby</div>
+                <div class="nama" style="margin: 20px 0px 20px 0px;">pekerjaan</div>
+                <div class="check"><input type="checkbox" name="checkbox" id="7">Check jika anda akan mengirimkan data ini</div>
+                <button id="btn">Cek!</button>
+            </div>
+            <div class="field">
+                <div class="input"><input type="text" style="margin-top: 10px;"></div>
+                <div class="input"><input type="text" style="width: 200px; height: 190px; margin: 10px 0px 10px 0px;"></div>
+                <div class="input"><input type="text"></div>
+                <div class="input"><input type="radio" name="var" style="margin: 5px 0px 5px 0px;">  laki-laki </div>
+                <div class="input"><input type="radio" name="var">  perempuan</div>
+                <div class="input"><input type="checkbox" style="margin: 10px 0px 10px 0px;"> berenang <input type="checkbox" style="margin-left: 10px;"> berlari <input type="checkbox" style="margin-left: 10px;">  lain-lain</div>
+                <div class="input"><input type="checkbox" style="margin: 20px 0px 20px 0px;">  swasta <input type="checkbox" style="margin-left: 10px;">  PNS<input type="checkbox" style="margin-left: 10px;">  lain-lain</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const inputs = document.getElementsByClassName('input');
+        const checkbox = document.getElementById('7');
+
+        btn.addEventListener('click', function() {
+            let allInputsFilled = true;
+
+            for (let i = 0; i < inputs.length; i++) {
+                let input = inputs[i].querySelector('input');
+                if (!input.value) {
+                    allInputsFilled = false;
+                    break;
+                }
+            }
+
+            if (!checkbox.checked) {
+                allInputsFilled = false;
+            }
+
+            if (allInputsFilled) {
+                alert('Anda berhasil mengisi data');
+            } else {
+                alert('Data kosong/kurang lengkap, silahkan isi kembali');
+            }
+        });
+    </script>
+</body>
+</html>
