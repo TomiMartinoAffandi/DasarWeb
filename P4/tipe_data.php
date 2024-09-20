@@ -12,4 +12,42 @@ echo"Variable d: {$d} <br>";
 echo"Variable e: {$e} <br>";
 
 var_dump($e);
+echo "<br>";
+
+$nilaiMatematika = 5.1;
+$nilaiIPA = 6.7;
+$nilaiBahasaIndonesia = 9.3;
+
+$rataRata = ($nilaiMatematika + $nilaiIPA + $nilaiBahasaIndonesia) / 3;
+
+echo"Matematika: {$nilaiMatematika} <br>";
+echo"IPA: {$nilaiIPA} <br>";
+echo"Bahasa Indonesia: {$nilaiBahasaIndonesia} <br>";
+echo"Rata - rata: {$rataRata} <br>";
+
+var_dump($rataRata);
+echo "<br>";
+
+$apakahSiswaLulus = true;
+$apakahSiswaSudahUjian = false;
+
+var_dump($apakahSiswaLulus);
+echo"<br>";
+var_dump($apakahSiswaSudahUjian);
+echo "<br>";
+
+$namaDepan = "ibnu";
+$namaBelakang = "jakaria";
+
+$namaLengkap = "{$namaDepan} {$namaBelakang}";
+$namaLengkap2 = $namaDepan . '' . $namaBelakang;
+
+echo "Nama depan: {$namaDepan} <br>";
+echo 'Nama belakang: ' . $namaBelakang . '<br>';
+
+echo $namaLengkap;
+echo '<br>';
+
+$listMahasiswa = ["wahid abdullah", "Elmo Bachtiar", "Lendis Fabri"];
+echo $listMahasiswa[0];
 ?>
